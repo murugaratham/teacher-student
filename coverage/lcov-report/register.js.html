@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for register.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> register.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var router = <span class="cstat-no" title="statement not covered" >require('express').Router();</span>
+const db = <span class="cstat-no" title="statement not covered" >require('../db');</span>
+const Sequelize = <span class="cstat-no" title="statement not covered" >require('sequelize');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >router.post('/', <span class="fstat-no" title="function not covered" >async (</span>req, res) =&gt; {</span>
+  const { teacher, students } = <span class="cstat-no" title="statement not covered" >req.body;</span>
+  let studentIds = <span class="cstat-no" title="statement not covered" >[];</span>
+  // db.sequelize.transaction((transaction) =&gt; {
+  const teacherId = <span class="cstat-no" title="statement not covered" >await db.Teacher.findOrCreate({</span>
+    where: { email: teacher }
+    // transaction: transaction
+  }).spread(<span class="fstat-no" title="function not covered" >teacher =&gt; <span class="cstat-no" title="statement not covered" ></span>teacher.id);</span>
+&nbsp;
+  const studentPromise = <span class="cstat-no" title="statement not covered" >Promise.all(</span>
+    students.map(<span class="fstat-no" title="function not covered" >studentEmail =&gt; </span>{
+<span class="cstat-no" title="statement not covered" >      return db.Student.findOrCreate({</span>
+        where: {
+          email: studentEmail,
+          isSuspended: false
+        }
+        // transaction: transaction
+      });
+    })
+  );
+<span class="cstat-no" title="statement not covered" >  studentPromise</span>
+    .then(<span class="fstat-no" title="function not covered" >result =&gt; </span>{
+<span class="cstat-no" title="statement not covered" >      result.map(<span class="fstat-no" title="function not covered" >student =&gt; </span>{</span>
+<span class="cstat-no" title="statement not covered" >        studentIds.push(student[0].get('id'));</span>
+      });
+    })
+    .then(<span class="fstat-no" title="function not covered" >() =&gt; </span>{
+      let registration = <span class="cstat-no" title="statement not covered" >studentIds.map(<span class="fstat-no" title="function not covered" >(i</span>d, idx) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return { teacherId: teacherId, studentId: id };</span>
+      });
+<span class="cstat-no" title="statement not covered" >      db.Registration.bulkCreate(registration)</span>
+        .then(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>res.sendStatus(204))</span>
+        .catch(Sequelize.ValidationError, <span class="fstat-no" title="function not covered" >err =&gt; </span>{
+<span class="cstat-no" title="statement not covered" >          return res.status(500).send({ error: 'already registered' });</span>
+        });
+    });
+  // res.sendStatus(204);
+});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = router;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Sep 13 2018 22:12:06 GMT+0800 (+08)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

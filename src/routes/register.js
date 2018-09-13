@@ -1,9 +1,12 @@
-var router = require("express").Router();
-const db = require("../db");
-const Sequelize = require("sequelize");
+var router = require('express').Router();
+const db = require('../db');
+const Sequelize = require('sequelize');
 
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   const { teacher, students } = req.body;
+  if (!students || !teacher) {
+    return res.status(500).send({ error: 'Incorrect parameters' });
+  }
   let studentIds = [];
   // db.sequelize.transaction((transaction) => {
   const teacherId = await db.Teacher.findOrCreate({
@@ -25,7 +28,7 @@ router.post("/", async (req, res) => {
   studentPromise
     .then(result => {
       result.map(student => {
-        studentIds.push(student[0].get("id"));
+        studentIds.push(student[0].get('id'));
       });
     })
     .then(() => {
@@ -35,10 +38,9 @@ router.post("/", async (req, res) => {
       db.Registration.bulkCreate(registration)
         .then(() => res.sendStatus(204))
         .catch(Sequelize.ValidationError, err => {
-          return res.status(500).send({ error: "already registered" });
+          return res.status(500).send({ error: 'already registered' });
         });
     });
-  // res.sendStatus(204);
 });
 
 module.exports = router;

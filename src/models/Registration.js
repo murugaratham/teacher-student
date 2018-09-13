@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define(
-    "teacher_students",
+    'teacher_students',
     {
       createdAt: {
         type: DataTypes.DATE,
@@ -17,8 +17,8 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         primaryKey: true,
         references: {
-          model: "Teachers",
-          key: "id"
+          model: 'Teachers',
+          key: 'id'
         }
       },
       studentId: {
@@ -26,13 +26,13 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         primaryKey: true,
         references: {
-          model: "Students",
-          key: "id"
+          model: 'Students',
+          key: 'id'
         }
       }
     },
     {
-      tableName: "teacher_students"
+      tableName: 'teacher_students'
     }
   );
 };

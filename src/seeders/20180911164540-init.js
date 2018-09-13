@@ -1,17 +1,17 @@
-"use strict";
+'use strict';
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     queryInterface.bulkInsert(
-      "teachers",
+      'teachers',
       [
         {
-          email: "teacher1@gmail.com",
+          email: 'teacher1@gmail.com',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          email: "teacher2@gmail.com",
+          email: 'teacher2@gmail.com',
           createdAt: new Date(),
           updatedAt: new Date()
         }
@@ -19,15 +19,15 @@ module.exports = {
       {}
     );
 
-    queryInterface.bulkInsert("students", [
+    queryInterface.bulkInsert('students', [
       {
-        email: "student1@example.com",
+        email: 'student1@example.com',
         isSuspended: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        email: "student2@example.com",
+        email: 'student2@example.com',
         isSuspended: false,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -47,7 +47,7 @@ module.exports = {
     // });
 
     // queryInterface.bulkInsert('teacher_students', mapping);
-    return queryInterface.bulkInsert("teacher_students", [
+    return queryInterface.bulkInsert('teacher_students', [
       {
         teacherId: 1,
         studentId: 1,
@@ -58,8 +58,8 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    queryInterface.bulkDelete("teachers", null, {});
-    queryInterface.bulkDelete("students", null, {});
-    queryInterface.bulkDelete("teacher_students", null, {});
+    queryInterface.bulkDelete('teachers', null, {});
+    queryInterface.bulkDelete('students', null, {});
+    queryInterface.bulkDelete('teacher_students', null, {});
   }
 };

@@ -25,7 +25,7 @@ SQLDATABASENAME=teacher_students
 - [x] prettier rc
 - [x] eslint
 - [x] env file for ports
-- [ ] jest test setup
+- [x] jest test setup
 - [x] user story 1
       POST /api/register
 - [ ] user story 2
@@ -34,3 +34,6 @@ SQLDATABASENAME=teacher_students
       POST /api/suspend
 - [ ] user story 4
       POST /api/retrievefornotifications
+
+what is helmet for?
+handle throw new error in routes?

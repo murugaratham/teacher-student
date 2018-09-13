@@ -22,5 +22,8 @@
     "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

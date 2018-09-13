@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define(
-    "teachers",
+    'students',
     {
       id: {
         type: DataTypes.INTEGER(11),
@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
       },
       email: {
         type: DataTypes.STRING(255),
+        allowNull: true
+      },
+      isSuspended: {
+        type: DataTypes.INTEGER(1),
         allowNull: true
       },
       createdAt: {
@@ -24,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     {
-      tableName: "teachers"
+      tableName: 'students'
     }
   );
 };
