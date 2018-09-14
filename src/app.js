@@ -7,10 +7,8 @@ const helmet = require('helmet');
 const { errorHandler, logErrors } = require('./handlers');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(helmet());
-app.use(logErrors);
-app.use(errorHandler);
+const middlewares = [bodyParser.json(), helmet(), logErrors, errorHandler];
+app.use(...middlewares);
 
 /**
  * Load custom routes

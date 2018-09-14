@@ -1,19 +1,9 @@
 var router = require('express').Router();
-const db = require('../db');
+const suspensionService = require('../service/suspensionService');
 
 router.post('/', (req, res) => {
   const { student } = req.body;
-  db.Student.update(
-    { isSuspended: true },
-    {
-      returning: true,
-      plain: true,
-      where: { email: student }
-    }
-  ).then(() => {
-    res.send(204);
-  });
+  suspensionService.suspendStudent(student).then(() => res.sendStatus(204));
 });
 
-// handle non existent student?
 module.exports = router;
