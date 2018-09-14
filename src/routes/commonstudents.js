@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
        FROM teacher_students ts
        left join students s on ts.studentId = s.id
        left join teachers t on ts.teacherId = t.id
-       WHERE t.email IN ('t5@teacher.com')
+       WHERE t.email IN (:teacher)
        GROUP BY studentId
        having count(distinct ts.teacherId )=:count;`,
       {
