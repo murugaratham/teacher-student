@@ -6,6 +6,20 @@
 4. `npm run start` or `npm run watch` for dev mode
 5. `npm run test` or `npm run test:dev` for unit test dev mode
 
+ these are my npm global packages, if you need
+```
+garylee@iMac [~] ]$ npm list -g --depth=0
+/usr/local/lib
+├── create-react-app@1.5.2
+├── mysql@2.16.0
+├── n@2.1.4
+├── npm@6.4.1
+├── sequelize-auto@0.4.29
+├── tsd@0.6.5
+├── typescript@2.1.4
+├── typings@2.1.0
+└── webpack@1.14.0
+```
 ## Sample .env config
 
 ```
