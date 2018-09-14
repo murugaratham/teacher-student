@@ -25,6 +25,8 @@ sequelize.sync({ force: false }).then(() => {
 
 var db = {};
 
+// importing the models to sequelize and set up the relationship
+// *..*
 db.Student = sequelize.import(__dirname + '/models/Student.js');
 db.Teacher = sequelize.import(__dirname + '/models/Teacher.js');
 db.Registration = sequelize.import(__dirname + '/models/Registration.js');
