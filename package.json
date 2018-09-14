@@ -4,7 +4,7 @@
   "description": "for msf",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "sudo node src/server.js",
     "watch": "sudo nodemon src/server.js",
     "test": "jest --coverage --verbose"
   },
@@ -35,6 +35,13 @@
   "jest": {
     "testEnvironment": "node",
     "setupTestFrameworkScriptFile": "<rootDir>/setupTest.js",
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 30
+      }
+    },
     "collectCoverageFrom": [
       "**/*.js",
       "!**/node_modules/**",
@@ -42,7 +49,8 @@
       "!**/routes/index.js",
       "!**/seeders/**",
       "!**/coverage/**",
-      "!**/db.js"
+      "!**/db.js",
+      "!**/server.js"
     ]
   }
 }

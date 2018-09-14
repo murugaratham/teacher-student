@@ -8,10 +8,8 @@ router.post('/', async (req, res) => {
     return res.status(500).send({ error: 'Incorrect parameters' });
   }
   let studentIds = [];
-  // db.sequelize.transaction((transaction) => {
   const teacherId = await db.Teacher.findOrCreate({
     where: { email: teacher }
-    // transaction: transaction
   }).spread(teacher => teacher.id);
 
   const studentPromise = Promise.all(
@@ -21,7 +19,6 @@ router.post('/', async (req, res) => {
           email: studentEmail,
           isSuspended: false
         }
-        // transaction: transaction
       });
     })
   );

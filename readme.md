@@ -1,7 +1,7 @@
 # Teacher student registration API
 
-1. Create a database
-2. update .env file
+1. Create a database `CREATE DATABASE dbname;`
+2. update .env file (we should .gitignore this and upload a .env.example but...)
 
 ## Sample .env config
 
@@ -28,12 +28,9 @@ SQLDATABASENAME=teacher_students
 - [x] jest test setup
 - [x] user story 1
       POST /api/register
-- [ ] user story 2
+- [x] user story 2
       GET /api/commonstudents
-- [ ] user story 3
+- [x] user story 3
       POST /api/suspend
-- [ ] user story 4
+- [x] user story 4
       POST /api/retrievefornotifications
-
-what is helmet for?
-handle throw new error in routes?

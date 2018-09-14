@@ -1,69 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1536852869478" clover="3.2.0">
-  <project timestamp="1536852869478" name="All files">
-    <metrics statements="43" coveredstatements="24" conditionals="8" coveredconditionals="3" methods="12" coveredmethods="1" elements="63" coveredelements="28" complexity="0" loc="43" ncloc="43" packages="3" files="4" classes="4">
+<coverage generated="1536915897305" clover="3.2.0">
+  <project timestamp="1536915897305" name="All files">
+    <metrics statements="69" coveredstatements="39" conditionals="8" coveredconditionals="3" methods="19" coveredmethods="1" elements="96" coveredelements="43" complexity="0" loc="69" ncloc="69" packages="3" files="7" classes="7">
       <package name="teacher-student">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="setupTest.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/setupTest.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="3" count="1" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
         </file>
       </package>
       <package name="teacher-student.src">
-        <metrics statements="21" coveredstatements="15" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="0"/>
+        <metrics statements="21" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="0"/>
         <file name="app.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/app.js">
-          <metrics statements="19" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="0"/>
-          <line num="1" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
+          <metrics statements="15" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="0"/>
+          <line num="1" count="5" type="cond" truecount="1" falsecount="1"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="10" count="5" type="stmt"/>
+          <line num="11" count="5" type="stmt"/>
+          <line num="12" count="5" type="stmt"/>
+          <line num="13" count="5" type="stmt"/>
+          <line num="18" count="5" type="stmt"/>
+          <line num="23" count="5" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="27" count="5" type="stmt"/>
         </file>
-        <file name="server.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/server.js">
-          <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <file name="handlers.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/handlers.js">
+          <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="19" count="5" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
         </file>
       </package>
       <package name="teacher-student.src.routes">
-        <metrics statements="21" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="9" coveredmethods="1"/>
+        <metrics statements="47" coveredstatements="21" conditionals="6" coveredconditionals="2" methods="16" coveredmethods="1"/>
+        <file name="commonstudents.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/routes/commonstudents.js">
+          <metrics statements="8" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
+        </file>
         <file name="register.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/routes/register.js">
           <metrics statements="21" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="9" coveredmethods="1"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
           <line num="6" count="1" type="stmt"/>
           <line num="7" count="1" type="cond" truecount="2" falsecount="2"/>
           <line num="8" count="1" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
           <line num="15" count="0" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
-          <line num="19" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
           <line num="28" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
-          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
           <line num="35" count="0" type="stmt"/>
           <line num="36" count="0" type="stmt"/>
           <line num="38" count="0" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="41" count="0" type="stmt"/>
-          <line num="46" count="1" type="stmt"/>
+          <line num="43" count="5" type="stmt"/>
+        </file>
+        <file name="retrievefornotifications.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/routes/retrievefornotifications.js">
+          <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="32" count="5" type="stmt"/>
+        </file>
+        <file name="suspend.js" path="/Users/garylee/Desktop/github.nosync/teacher-student/src/routes/suspend.js">
+          <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="19" count="5" type="stmt"/>
         </file>
       </package>
     </metrics>
