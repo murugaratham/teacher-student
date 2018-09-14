@@ -3,8 +3,9 @@
 1. Create a database `CREATE DATABASE <dbname>;`
 2. update .env file (we should .gitignore this and upload a .env.example but...)
 3. Optionally, seed the database with a little data
-4. `npm run start` or `npm run watch` for dev mode
-5. `npm run test` or `npm run test:dev` for unit test dev mode
+4. `npm install`
+5. `npm run start` or `npm run watch` for dev mode
+6. `npm run test` or `npm run test:dev` for unit test dev mode
 
  these are my npm global packages, if you need
 ```
