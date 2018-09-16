@@ -6,7 +6,8 @@
   "scripts": {
     "start": "sudo node src/server.js",
     "watch": "sudo nodemon src/server.js",
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose --no-cache",
+    "test:dev": "jest --watch --verbose"
   },
   "author": "granaldo123@yahoo.com",
   "license": "MIT",
@@ -39,7 +40,7 @@
       "global": {
         "branches": 0,
         "functions": 0,
-        "lines": 30
+        "lines": 0
       }
     },
     "collectCoverageFrom": [
@@ -49,8 +50,10 @@
       "!**/routes/index.js",
       "!**/seeders/**",
       "!**/coverage/**",
+      "!**/config.js",
       "!**/db.js",
-      "!**/server.js"
+      "!**/server.js",
+      "!**/setupTest.js"
     ]
   }
 }

@@ -1,8 +1,26 @@
 # Teacher student registration API
 
-1. Create a database `CREATE DATABASE dbname;`
+1. Create a database `CREATE DATABASE <dbname>;`
 2. update .env file (we should .gitignore this and upload a .env.example but...)
+3. Optionally, seed the database with a little data
+4. `npm install`
+5. `npm run start` or `npm run watch` for dev mode
+6. `npm run test` or `npm run test:dev` for unit test dev mode
 
+ these are my npm global packages, if you need
+```
+garylee@iMac [~] ]$ npm list -g --depth=0
+/usr/local/lib
+├── create-react-app@1.5.2
+├── mysql@2.16.0
+├── n@2.1.4
+├── npm@6.4.1
+├── sequelize-auto@0.4.29
+├── tsd@0.6.5
+├── typescript@2.1.4
+├── typings@2.1.0
+└── webpack@1.14.0
+```
 ## Sample .env config
 
 ```
@@ -10,7 +28,7 @@ PORT=80
 SQLUSER=root
 SQLPASSWORD=P@ssw0rd!
 SQLHOST=localhost
-SQLDATABASENAME=teacher_students
+SQLDATABASENAME=<dbname>
 ```
 
 ## how to run seeders (optional)
