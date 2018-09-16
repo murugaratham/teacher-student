@@ -1,9 +1,11 @@
 var router = require('express').Router();
 const registrationService = require('../service/registrationService');
-const { ValidationError } = require('sequelize');
 
 router.post('/', async (req, res) => {
   const { teacher, students } = req.body;
+  if (!students || !teacher) {
+    return res.status(500).send({ error: 'Incorrect parameters' });
+  }
   registrationService
     .registerTeacherToStudent(teacher, students)
     .then(() => res.sendStatus(204))

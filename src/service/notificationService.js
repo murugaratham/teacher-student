@@ -30,6 +30,10 @@ module.exports = {
         return {
           recipients: [...emails, ...mentioned]
         };
+      })
+      .catch(err => {
+        console.error(err);
+        return { Error: 'General exception' };
       });
   }
 };

@@ -7,7 +7,8 @@
 5. `npm run start` or `npm run watch` for dev mode
 6. `npm run test` or `npm run test:dev` for unit test dev mode
 
- these are my npm global packages, if you need
+these are my npm global packages, if you need
+
 ```
 garylee@iMac [~] ]$ npm list -g --depth=0
 /usr/local/lib
@@ -21,6 +22,7 @@ garylee@iMac [~] ]$ npm list -g --depth=0
 ├── typings@2.1.0
 └── webpack@1.14.0
 ```
+
 ## Sample .env config
 
 ```
@@ -52,3 +54,8 @@ SQLDATABASENAME=<dbname>
       POST /api/suspend
 - [x] user story 4
       POST /api/retrievefornotifications
+
+-- create database mba;
+-- if you use new auth protocol, you might get 'please upgrade client warning', do this till mysql2 driver supports the new protocol
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'P@ssw0rd!'

@@ -1,5 +1,6 @@
 const { getEntityCount } = require('../util');
 const db = require('../db');
+const Sequelize = require('sequelize');
 
 const getCommonStudentSql = `SELECT ts.studentId, s.email
     FROM teacher_students ts
@@ -24,6 +25,13 @@ module.exports = {
         replacements: { teacher: teacher, count: length },
         type: db.sequelize.QueryTypes.SELECT
       })
-      .then(result => result);
+      .then(result => result)
+      .catch(Sequelize.ValidationError, err => {
+        return { Error: 'Already registered' };
+      })
+      .catch(err => {
+        console.error(err);
+        return { Error: 'General exception' };
+      });
   }
 };
